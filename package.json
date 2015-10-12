@@ -1,0 +1,25 @@
+{
+  "name": "starwarstcs-blog",
+  "version": "1.0.0",
+  "description": "This is my jekyll site template. Used for blog and project pages.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gloryofthe80s/starwarstcs-blog.git"
+  },
+  "author": "Jacob Wielgus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gloryofthe80s/starwarstcs-blog/issues"
+  },
+  "homepage": "https://github.com/Gloryofthe80s/starwarstcs-blog#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
