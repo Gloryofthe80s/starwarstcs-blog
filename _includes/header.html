@@ -1,6 +1,6 @@
 <header>
   <div class="container">    
-    <h5 class="logo">Star Wars: The Complete Saga</h5>
+    <h5>Star Wars: The Complete Saga</h5>
     
     <nav class="main">
       <ul>
@@ -8,6 +8,12 @@
           <li><a href="/" class="active">Blog</a></li>
         {% else %}
           <li><a href="/">Blog</a></li>
+        {% endif %}
+
+        {% if page.nav == "archive" %}
+          <li><a href="archive.html" class="active">Archive</a></li>
+        {% else %}
+          <li><a href="archive.html">Archive</a></li>
         {% endif %}
         
         {% if page.nav == "about" %}
@@ -21,17 +27,12 @@
         {% else %}
           <li><a href="contact.html">Contact</a></li>
         {% endif %}
-
-        {% if page.nav == "archive" %}
-          <li><a href="archive.html" class="active">Archive</a></li>
-        {% else %}
-          <li><a href="archive.html">Archive</a></li>
-        {% endif %}
       </ul>
     </nav>
     
     <div class="nav-slider">
       <div class="nav-selection {{ page.nav }}"></div>
     </div>
-  </div>
+  
+  </div><!-- /container -->
 </header>
