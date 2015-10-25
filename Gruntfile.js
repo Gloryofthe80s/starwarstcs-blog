@@ -4,6 +4,7 @@ module.exports = function( grunt ) {
     require( 'time-grunt' )( grunt );
     require( 'load-grunt-tasks' )( grunt );
     
+    
     grunt.initConfig({
         
         sass: {                              
@@ -17,6 +18,7 @@ module.exports = function( grunt ) {
             }
         }, //end sass
 
+        
         csslint : {
             test : {
                 options : {
@@ -32,6 +34,7 @@ module.exports = function( grunt ) {
             }
         }, //end csslint
 
+        
         concat : {
             dist : {
                 src : [ 'css/*.css' ],
@@ -39,6 +42,7 @@ module.exports = function( grunt ) {
             }
         }, //end concat
 
+        
         cssmin : {
             dist : {
                 src : 'css/main.css',
@@ -46,6 +50,7 @@ module.exports = function( grunt ) {
             }
         }, //end cssmin
 
+        
         watch : {
             files : [ 
                         'index.html',
@@ -69,22 +74,26 @@ module.exports = function( grunt ) {
             }
         },//end watch
         
+        
         shell : {
             jekyllBuild : {
                 command : 'jekyll build'
             },
+            
             jekyllServe : {
                 command : 'jekyll serve --watch'
             },
-            ghPages    : {
+            
+            ghPages     : {
                 command: 'git subtree push --prefix _site origin gh-pages'
             } 
         } //end shell
     
     });//end initConfig
 
+    
     // register custom grunt tasks
-    grunt.registerTask( 'serve', ['sass', 'shell:jekyllServe', 'watch' ] );
+    grunt.registerTask( 'serve', ['sass', 'shell:jekyllServe' ] );
     grunt.registerTask( 'test', [ 'csslint' ] );
     grunt.registerTask( 'build', [ 'sass', 'concat', 'cssmin', 'shell:jekyllBuild' ] );
     grunt.registerTask( 'deploy', [ 'shell:ghPages' ] );

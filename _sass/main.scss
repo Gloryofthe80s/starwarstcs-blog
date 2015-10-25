@@ -1,5 +1,2 @@
-$test : #FFFFFF;
+@import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap-custom.scss";
 
-p {
-	color: $test;
-}

@@ -5,20 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Inaugural Post | SW:TCS</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="/css/mobile.css">
-    <link rel="stylesheet" href="/css/desktop.css" media="(min-width:40em)">
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:300,500,300italic,500italic|Ubuntu+Condensed' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" charset="utf-8" src="http://tybenz.com/exemplar/js/matchmedia.js"></script>
-    <!-- // <script type="text/javascript" charset="utf-8" src="http://tybenz.com/exemplar/js/picturefill.js"></script> -->
+    <link rel="stylesheet" href="/css/main.css">
   </head>
   
   
   <body>
-    <div class="wrapper">
-      <header>
+    <header>
   <div class="container">    
     <h5>Star Wars: The Complete Saga</h5>
     
@@ -48,13 +40,9 @@
   
   </div><!-- /container -->
 </header>
-      
-      <section id="main">
-        <article class="container">
-          <h1 class="hero">Inaugural Post</h1>
-          <p class="date">20 Oct 2015</p>
-
-          <p>I think most Star Wars fans have their own personal hierarchy of canon.</p>
+    
+    <div class="container">
+      <p>I think most Star Wars fans have their own personal hierarchy of canon.</p>
 
 <p>For example, to me, the highest order of canon is the original trilogy of feature films. The quality may fluctuate slightly, but it’s a great cast, the stories hang together, and, since they were all out on home video before I was born, I watched all of them for the first time when I was four. I have mainlined those movies ever since. I watch them at least once a year, usually more, and they are interwoven in my DNA. They have informed my conception of filmmaking, story, humor, music, heroism, and, if we’re being honest, a little bit of my sexuality (Princess Leia has to be among the first women for whom I had feelings, and my marriage to a tough, no-nonsense lady probably owes a little to her cinematic influence).</p>
 
@@ -71,10 +59,9 @@
 <p>I have a good feeling about this.</p>
 
 
-        </article>
-      </section>
-      
-      <footer>
+    </div><!-- /container -->
+    
+    <footer>
     <nav class="container">
         <ul>
             <li>&copy; Ryan Howard 2015</li>
@@ -82,11 +69,10 @@
     </nav>
 </footer>
 
-    </div>
   </body>
   
-  
-  <script type="text/javascript">
+  <!-- GOOGLE ANALYTICS -->
+<script type="text/javascript">
 
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-33073396-1']);
@@ -100,38 +86,10 @@
 
 </script>
 
-<script type="text/javascript" charset="utf-8">
-    document.onreadystatechange = function() {
-        if ( document.readyState == 'complete' ) {
-            var active = document.querySelector( 'header nav.main a.active' ).innerHTML.toLowerCase(),
-                links = document.querySelectorAll( 'header nav.main li a'),
-                selection = document.querySelector( 'header .nav-selection' ),
-                subactive = document.querySelector( 'header nav.subnav a.active' ).dataset.subnav,
-                sublinks = document.querySelectorAll( 'header nav.subnav li a'),
-                subselection = document.querySelector( 'header .subnav-selection' ),
-                i, j, link;
-            for ( i = 0; i < links.length; i++ ) {
-                link = links[ i ];
-                link.addEventListener( 'mouseover', function() {
-                    selection.className = 'nav-selection';
-                    selection.className = 'nav-selection ' + this.innerHTML.toLowerCase();
-                });
-                link.addEventListener( 'mouseout', function() {
-                    selection.className = 'nav-selection ' + active;
-                });
-            }
-            for ( i = 0; i < sublinks.length; i++ ) {
-                link = sublinks[ i ];
-                link.addEventListener( 'mouseover', function() {
-                    subselection.className = 'subnav-selection';
-                    subselection.className = 'subnav-selection ' + this.dataset.subnav;
-                });
-                link.addEventListener( 'mouseout', function() {
-                    subselection.className = 'subnav-selection ' + subactive;
-                });
-            }
-        }
-    };
-</script>
+
+
+
+
+
 
 </html>
