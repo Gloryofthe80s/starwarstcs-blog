@@ -7322,7 +7322,7 @@ button.close {
 }
 @font-face {
   font-family: episodeone;
-  src: url(/fonts/episode1.ttf);
+  src: url(/font/episode1.ttf);
 }
 body {
   background-color: #171717;
