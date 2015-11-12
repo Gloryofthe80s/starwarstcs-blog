@@ -25,11 +25,7 @@ module.exports = function( grunt ) {
                     import : 2
                 },
                 src : [ 
-                        'css/desktop.css', 
-                        'css/font.css',
-                        'css/ie.css',
-                        'css/mobile.css',
-                        'css/pygments.css',
+                        'css/main.css'
                       ]
             }
         }, //end csslint
@@ -38,7 +34,7 @@ module.exports = function( grunt ) {
         concat : {
             dist : {
                 src : [ 'css/*.css' ],
-                dest : 'css/main.css',
+                dest : 'css/the-big-one.css',
             }
         }, //end concat
 
@@ -60,7 +56,7 @@ module.exports = function( grunt ) {
                         '_sass/*.scss',
                         '_layouts/*.html',
                         '_includes/*.html',
-                        '_posts/*.markdown',
+                        '_posts/*.md',
                         '_config.yml', 
                     ],
             tasks : [ 
@@ -81,7 +77,7 @@ module.exports = function( grunt ) {
             },
             
             jekyllServe : {
-                command : 'jekyll serve --watch'
+                command : 'jekyll serve'
             },
             
             ghPages     : {
