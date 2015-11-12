@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7318,6 +7319,35 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+@font-face {
+  font-family: episodeone;
+  src: url(/fonts/episode1.ttf);
+}
+body {
+  background-color: #171717;
+  color: #DDD;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url(../img/starry-bg.png);
+}
+
+.container {
+  background-color: #171717;
+}
+
+.main-logo {
+  padding: 10px 0;
+  font-size: 2rem;
+  font-family: episodeone;
+}
+
+.post {
+  border: 2px solid red;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.post.featured {
+  border-color: orange;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,2 +1,37 @@
 @import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap-custom.scss";
+@import "fonts.scss";
 
+
+$bg-black  : #171717;
+$text-gray : #DDD;
+
+body {
+	background-color: $bg-black;
+	color: $text-gray;
+	font-family: 'Open Sans', sans-serif;
+	background-image : url(../img/starry-bg.png);
+}
+
+.container {
+	background-color: $bg-black;
+}
+
+.main-logo {
+	padding: 10px 0;
+	font-size: 2rem;
+	font-family: episodeone;
+
+	.logo-title {
+
+	}
+}//end .main-logo
+
+.post {
+	border: 2px solid red;
+	padding: 15px;
+	margin-bottom: 20px;
+
+	&.featured {
+		border-color: orange;
+	}
+}
