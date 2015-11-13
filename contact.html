@@ -16,40 +16,46 @@
   
   <body>
     <header>
-  <div class="container">    
-    <h5 class="main-logo">
-      %#T %H %E&nbsp;%C %O $&%M $&%P $&%L $&%E $&%T $&%I $&%O $&%N $&%I $&%S $&%T&nbsp;$&%S $&%A $&%G $&A $&
-    </h5>
-    
-    <nav class="main">
-      <ul>
+  <div class="container-fluid black">
+    <div class="container black">    
+      <div class="row">
+        <div class="col-sm-5">
+          <h5 class="main-logo">
+            %#T %H %E&nbsp;%C %O $&%M $&%P $&%L $&%E $&%T $&%I $&%O $&%N $&%I $&%S $&%T&nbsp;$&%S $&%A $&%G $&A $&
+          </h5>
+        </div>
         
-          <li><a href="/">Blog</a></li>
-        
+        <div class="col-sm-7">
+          <nav class="main-nav">
+            <ul>
+              
+                <li><a href="/">BLOG</a></li>
+              
 
-        
-          <li><a href="archive.html">Archive</a></li>
-        
-        
-        
-          <li><a href="about.html">About</a></li>
-        
-        
-        
-          <li><a href="contact.html" class="active">Contact</a></li>
-        
-      </ul>
-    </nav>
-    
-    <div class="nav-slider">
-      <div class="nav-selection contact"></div>
-    </div>
-  
-  </div><!-- /container -->
+              
+                <li><a href="archive.html">ARCHIVE</a></li>
+              
+              
+              
+                <li><a href="about.html">ABOUT</a></li>
+              
+              
+              
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+              
+            </ul>
+          </nav>
+          
+          <div class="nav-slider">
+            <div class="nav-selection contact"></div>
+          </div>
+        </div>
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </div><!-- /container-fluid -->
 </header>
     
     <div class="container">
-  <h2>Contact Us</h2>
   
   <p>Should you find this content objectionable, you can contact us here.</p>
 
@@ -59,11 +65,11 @@
 
     
     <footer>
-    <nav class="container">
-        <ul>
-            <li>&copy; Ryan Howard 2015</li>
-        </ul>
-    </nav>
+	<div class="container-fluid black">
+		<div class="container black">
+      <p>&copy; Ryan Howard 2015</p>
+		</div><!-- /container -->
+	</div><!-- /container-fluid -->
 </footer>
 
   </body>
