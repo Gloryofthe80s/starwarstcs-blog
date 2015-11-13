@@ -6,7 +6,7 @@
           <h5 class="main-logo">
             %#T %H %E&nbsp;%C %O $&%M $&%P $&%L $&%E $&%T $&%I $&%O $&%N $&%I $&%S $&%T&nbsp;$&%S $&%A $&%G $&A $&
           </h5>
-        </div>
+        </div><!-- /col -->
         
         <div class="col-sm-7">
           <nav class="main-nav">
@@ -18,29 +18,25 @@
               {% endif %}
 
               {% if page.nav == "archive" %}
-                <li><a href="archive.html" class="active">ARCHIVE</a></li>
+                <li><a href="/archive.html" class="active">ARCHIVE</a></li>
               {% else %}
-                <li><a href="archive.html">ARCHIVE</a></li>
+                <li><a href="/archive.html">ARCHIVE</a></li>
               {% endif %}
               
               {% if page.nav == "about" %}
-                <li><a href="about.html" class="active">ABOUT</a></li>
+                <li><a href="/about.html" class="active">ABOUT</a></li>
               {% else %}
-                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="/about.html">ABOUT</a></li>
               {% endif %}
               
               {% if page.nav == "contact" %}
-                <li><a href="contact.html" class="active">CONTACT</a></li>
+                <li><a href="/contact.html" class="active">CONTACT</a></li>
               {% else %}
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="/contact.html">CONTACT</a></li>
               {% endif %}
             </ul>
           </nav>
-          
-          <div class="nav-slider">
-            <div class="nav-selection {{ page.nav }}"></div>
-          </div>
-        </div>
+        </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
   </div><!-- /container-fluid -->
