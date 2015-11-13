@@ -1,40 +1,47 @@
 <header>
-  <div class="container">    
-    <h5 class="main-logo">
-      %#T %H %E&nbsp;%C %O $&%M $&%P $&%L $&%E $&%T $&%I $&%O $&%N $&%I $&%S $&%T&nbsp;$&%S $&%A $&%G $&A $&
-    </h5>
-    
-    <nav class="main">
-      <ul>
-        {% if page.nav == "blog" %}
-          <li><a href="/" class="active">Blog</a></li>
-        {% else %}
-          <li><a href="/">Blog</a></li>
-        {% endif %}
+  <div class="container-fluid black">
+    <div class="container black">    
+      <div class="row">
+        <div class="col-sm-5">
+          <h5 class="main-logo">
+            %#T %H %E&nbsp;%C %O $&%M $&%P $&%L $&%E $&%T $&%I $&%O $&%N $&%I $&%S $&%T&nbsp;$&%S $&%A $&%G $&A $&
+          </h5>
+        </div>
+        
+        <div class="col-sm-7">
+          <nav class="main-nav">
+            <ul>
+              {% if page.nav == "blog" %}
+                <li><a href="/" class="active">BLOG</a></li>
+              {% else %}
+                <li><a href="/">BLOG</a></li>
+              {% endif %}
 
-        {% if page.nav == "archive" %}
-          <li><a href="archive.html" class="active">Archive</a></li>
-        {% else %}
-          <li><a href="archive.html">Archive</a></li>
-        {% endif %}
-        
-        {% if page.nav == "about" %}
-          <li><a href="about.html" class="active">About</a></li>
-        {% else %}
-          <li><a href="about.html">About</a></li>
-        {% endif %}
-        
-        {% if page.nav == "contact" %}
-          <li><a href="contact.html" class="active">Contact</a></li>
-        {% else %}
-          <li><a href="contact.html">Contact</a></li>
-        {% endif %}
-      </ul>
-    </nav>
-    
-    <div class="nav-slider">
-      <div class="nav-selection {{ page.nav }}"></div>
-    </div>
-  
-  </div><!-- /container -->
+              {% if page.nav == "archive" %}
+                <li><a href="archive.html" class="active">ARCHIVE</a></li>
+              {% else %}
+                <li><a href="archive.html">ARCHIVE</a></li>
+              {% endif %}
+              
+              {% if page.nav == "about" %}
+                <li><a href="about.html" class="active">ABOUT</a></li>
+              {% else %}
+                <li><a href="about.html">ABOUT</a></li>
+              {% endif %}
+              
+              {% if page.nav == "contact" %}
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+              {% else %}
+                <li><a href="contact.html">CONTACT</a></li>
+              {% endif %}
+            </ul>
+          </nav>
+          
+          <div class="nav-slider">
+            <div class="nav-selection {{ page.nav }}"></div>
+          </div>
+        </div>
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </div><!-- /container-fluid -->
 </header>

@@ -2,8 +2,12 @@
 @import "fonts.scss";
 
 
-$bg-black  : #171717;
-$text-gray : #DDD;
+$bg-black         : #171717;
+$text-gray        : #DDD;
+$container-black  : rgba(32, 32, 32, .85);
+$orig-poster-gray : rgb(223, 223, 223);
+$orig-poster-blue : rgba(14, 119, 223, .7);
+$orig-poster-red  : rgba(182, 8, 0, .7);
 
 body {
 	background-color: $bg-black;
@@ -13,7 +17,12 @@ body {
 }
 
 .container {
-	background-color: $bg-black;
+	background-color: $container-black;
+	border-radius: 8px;
+
+	&.main-container {
+		padding: 20px;
+	}
 }
 
 .main-logo {
@@ -27,11 +36,65 @@ body {
 }//end .main-logo
 
 .post {
-	border: 2px solid red;
+	@include transition(.2s, all);
+	border: 1px solid $orig-poster-gray;
 	padding: 15px;
 	margin-bottom: 20px;
+	border-radius: 8px;
+
+	&:hover {
+		@include transition(.2s, all);
+		border-color: $orig-poster-blue;
+		background-color: darken($container-black, 5%);
+	}
 
 	&.featured {
-		border-color: orange;
+		border-color: $orig-poster-gray;
+
+		&:hover {
+			@include transition(.2s, all);
+			border-color: $orig-poster-red;
+		}
 	}
+}//end .post
+
+// ------ NAV ------ //
+header {
+	margin-bottom: 25px;
+	border-bottom: 2px solid $orig-poster-blue;
+}
+
+.black {
+	background-color: $bg-black;
+}
+
+.main-nav {
+	margin-top: 10px;
+	font-size: 1.5em;
+
+	ul {
+		li {
+			display: inline-block;
+			padding: 10px;
+
+			a {
+				font-weight: 700;
+				color: $text-gray;
+
+				&.active {
+					color: $orig-poster-blue;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+// ------ FOOTER ------ //
+
+footer {
+	padding: 15px 0;
+	margin-top: 25px;
+	border-top: 2px solid $orig-poster-blue;
+	background-color: $bg-black;
 }
