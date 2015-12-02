@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Inaugural Post
+author: Ryan Howard
+categories: Ep. IV, The Saga
 ---
 
 I think most Star Wars fans have their own personal hierarchy of canon.

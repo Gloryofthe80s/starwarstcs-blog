@@ -4,19 +4,23 @@
 
 $bg-black         : #171717;
 $text-gray        : #DDD;
+$text-black       : #424040;
 $container-black  : rgba(30, 30, 30, .85);
-$orig-poster-gray : rgb(223, 223, 223);
-$orig-poster-blue : rgba(14, 119, 223, .7);
-$orig-poster-red  : rgba(182, 8, 0, .7);
+$orig-poster-gray : darken(rgb(223, 223, 223), 40%);
+$orig-poster-blue : rgb(14, 119, 223);
+$orig-poster-red  : rgb(182, 8, 0);
 
 body {
-	background-color: $bg-black;
 	color: $text-gray;
 	font-family: 'Open Sans', sans-serif;
-	background-image : url(../img/starry-bg.png);
+	
+	&.starry-bg {
+		background-color: $bg-black;
+		background-image : url(../img/starry-bg.png);
+	}
 }
 
-.container {
+.black-container {
 	background-color: $container-black;
 	border-radius: 8px;
 
@@ -27,9 +31,8 @@ body {
 
 .post {
 	@include transition(.2s, all);
-	border-top: 1px solid darken($orig-poster-gray, 40%);
-	border-bottom: 1px solid darken($orig-poster-gray, 40%);
-	padding: 15px;
+	// border-top: 1px solid $orig-poster-gray;
+	border-bottom: 2px solid $orig-poster-gray;
 	margin-bottom: 20px;
 	background-color: darken($container-black, 2%);
 	cursor: pointer;
@@ -38,15 +41,41 @@ body {
 	&:hover {
 		@include transition(.2s, all);
 		border-color: $orig-poster-blue;
-		background-color: darken($container-black, 5%);
+		background-color: darken($container-black, 3%);
+
+		.post-content {
+			@include transition(.2s, all);
+			border-color: $orig-poster-blue;
+		}
+	}
+	
+	.pic {
+		min-height: 300px;
+		background: url(../img/post-pic-1.jpg);
+		background-size: cover;
+	}
+
+	.pic-fixed {
+		width: 100%;
+		// max-height: 260px;
+	}
+
+	.post-content {
+		padding: 15px;
+		border-top: 2px solid $orig-poster-gray;
 	}
 
 	&.featured {
-		border-color: darken($orig-poster-gray, 40%);
+		border-color: $orig-poster-gray;
 
 		&:hover {
 			@include transition(.2s, all);
 			border-color: $orig-poster-red;
+
+			.post-content {
+				@include transition(.2s, all);
+				border-color: $orig-poster-red;
+			}
 		}
 	}
 }//end .post
@@ -87,11 +116,125 @@ header {
 	}
 }
 
-// ------ FOOTER ------ //
 
+// ------ POSTS ------ //
+.post-container {
+	font-size: 1.3em;
+	line-height: 28px;
+
+	@media (max-width: $screen-xs-max) { 
+		font-size: 1em;
+		line-height: 22px;  
+  	}
+
+  	p {
+  		margin-bottom: 15px;
+  	}
+	
+	.post-col {
+		background-color: #E6E6E6;
+		color: $text-black;
+		padding: 20px;
+		border-radius: 6px;
+		margin-bottom: 20px;	
+		
+		.post-header {
+			padding: 20px 0;
+			border-bottom: 4px solid $orig-poster-blue;
+			margin-bottom: 20px;
+
+			.title {
+				margin-top: 0;
+				font-weight: bold;
+			}
+
+			.author {
+				margin: 0;
+			}
+
+			.date {
+				margin: 0;
+			}
+		}
+	
+		p {	
+			margin-bottom: 20px;
+		}
+	}//end .post-col
+
+	.related-posts-col {
+		color: $text-black;
+		background-color: #E6E6E6;
+		border-radius: 6px;
+		padding: 20px;
+		
+		h2 {
+			margin-top: 0;
+		}
+
+		.related-post-container {
+			background-color: $bg-black;
+			border: 2px solid black;
+			padding: 15px;
+		}
+	}
+}//end .post-container
+
+// ------ END:POSTS ------ //
+
+
+
+
+
+// ------ ARCHIVE ------ //
+.archive-container {
+
+	.posts-list {
+		list-style: none;
+	}
+
+	h1 {
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		border-bottom: 4px solid $orig-poster-gray;
+	}
+}
+// ------ END:ARCHIVE ------ //
+
+
+
+
+// ------ ABOUT ------ //
+.about-container {
+	h1 {
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		border-bottom: 4px solid $orig-poster-gray;
+	}
+
+	.bio-container {
+		padding-bottom: 10px;
+		margin-bottom: 25px;
+		border-bottom: 4px solid $orig-poster-gray;
+		
+		.name {
+			font-size: 1.5em;
+			color: $orig-poster-blue;
+		}
+
+
+	}//end .bio-container
+}
+// ------ END:ABOUT ------ //
+
+
+
+
+// ------ FOOTER ------ //
 footer {
 	padding: 15px 0;
 	margin-top: 25px;
 	border-top: 1px solid $orig-poster-gray;
 	background-color: $bg-black;
 }
+// ------ END:FOOTER ------ //

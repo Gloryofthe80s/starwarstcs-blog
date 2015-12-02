@@ -3,7 +3,7 @@
     <div class="container black">    
       <div class="row">
         <div class="col-sm-5">
-          <img src="img/logo.png" class="logo img-responsive" alt="Star Wars: The Completionist Saga">
+          <img src="{{site.baseurl}}/img/logo.png" class="logo img-responsive" alt="Star Wars: The Completionist Saga">
         </div><!-- /col -->
         
         <div class="col-sm-7">
@@ -25,12 +25,6 @@
                 <li><a href="/about.html" class="active">ABOUT</a></li>
               {% else %}
                 <li><a href="/about.html">ABOUT</a></li>
-              {% endif %}
-              
-              {% if page.nav == "contact" %}
-                <li><a href="/contact.html" class="active">CONTACT</a></li>
-              {% else %}
-                <li><a href="/contact.html">CONTACT</a></li>
               {% endif %}
             </ul>
           </nav>
