@@ -3,49 +3,63 @@ title: Blog
 nav: blog
 layout: default
 ---
-  
-<div class="container black-container main-container">
-  <div class="row">
-    <div class="col-xs-12">
-      
-      <div class="post featured">
-        <div class="col-sm-7">
-          <img src="img/post-pic-1.jpg" alt="" class="img-responsive">
-        </div><!-- /col -->
-        
-        <div class="col-sm-5">
-          <div class="post-content">
-            <h3>This is a featured post</h3>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, sunt odit molestiae ab, assumenda, quam beatae asperiores accusamus provident eos odio porro r  epellendus tenetur cumque. Praesentium veritatis tenetur quidem necessitatibus!</p>
-          </div><!-- /post-content -->
-        </div><!-- /col -->
-      </div><!-- /post featured -->
-    
+<div class="container  main-container">
+  
+  <div class="row">
+    <div class="col-xs-12  black-bg">
+      {% assign featured = (site.posts | where: "featured" , "true") %}
+      {% for post in featured limit:1 %}
+        <a href="{{ post.url }}">
+          <div class="post  featured">
+            <div class="row">
+              <div class="col-sm-7">
+                <img src="img/{{ post.photo }}" alt="" class="post-img  img-responsive">
+              </div><!-- /col -->
+              
+              <div class="col-sm-5">
+                <div class="post-content">
+                  <div class="post-chunk">
+                    <span class="featured">FEATURED &nbsp;POST</span>
+
+                    <h3 class="post-title">{{ post.title }}</h3>
+                    <p class="post-author">by {{ post.author }}</p>
+                  </div><!-- /post-chunk -->
+
+                  <p class="post-excerpt">{{ post.content | strip_html | truncatewords:75  }}</p>
+                </div><!-- /post-content -->
+              </div><!-- /col -->
+            </div><!-- /row -->
+          </div><!-- /post featured -->
+        </a> 
+      {% endfor %}
     </div><!-- /col -->
   </div><!-- /row -->
 
   <div class="row">
-    <div class="col-sm-6">
-      <div class="post">
-        <img src="img/post-pic-1.jpg" alt="" class="img-responsive">
-        <div class="post-content">
-          <h3>This is a post</h3>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, similique dolores aut voluptatem molestiae. Nisi veniam tempore, quia necessitatibus omnis excepturi reiciendis laudantium hic. Deserunt minima exercitationem neque tenetur recusandae!</p>  
-        </div><!-- /post-content -->
-      </div><!-- /post -->
-    </div><!-- /col -->
-
-    <div class="col-sm-6">
-      <div class="post">
-        <img src="img/post-pic-2.jpg" alt="" class="img-responsive">
-        <div class="post-content">
-          <h3>Another post, have we</h3>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque voluptate cum vitae adipisci dolore, officia alias molestiae autem, velit, deserunt quo recusandae nostrum eveniet. Minus deleniti et porro velit aperiam?</p>
-        </div><!-- /post-content -->
-      </div><!-- /post -->
+    <div class="col-xs-12 black-bg">
+      <div class="row">
+      {% assign notFeatured = (site.posts | where: "featured" , "false") %}
+      {% for post in notFeatured limit:2 %}
+        <a href="{{ post.url }}">
+          <div class="col-sm-6">
+            <div class="post">
+              <img src="img/{{ post.photo }}" alt="" class="post-img img-responsive">
+              
+              <div class="post-content">
+                <div class="post-chunk">
+                  <h3 class="post-title">{{ post.title }}</h3>
+                  <p class="post-author">by {{ post.author }}</p>
+                </div><!-- /post-chunk -->
+                
+                <p class="post-excerpt">{{ post.content | strip_html | truncatewords:60}}</p>  
+              </div><!-- /post-content -->
+            </div><!-- /post -->
+          </div><!-- /col -->
+        </a>
+      {% endfor %}
+      </div><!-- /row -->
+    
     </div><!-- /col -->
   </div><!-- /row -->
 

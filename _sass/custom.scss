@@ -1,0 +1,303 @@
+// ------ GENERAL ------ //
+body {
+	color: $text-gray;
+	font-family: 'Open Sans', sans-serif;
+	
+	&.starry-bg {
+		background-color: $bg-black;
+		background-image : url(../img/starry-bg.png);
+	}
+}
+
+.container {
+	
+	&.main-container {
+		padding: 20px;
+	}
+}
+
+.black-bg {
+	background-color: $container-black;
+	border-radius: 8px;
+}
+// ------ END:GENERAL ------ //
+
+
+
+
+
+// ------ NAV ------ //
+header {
+	font-family: $novelty-font;
+	margin-bottom: 25px;
+	border-bottom: 1px solid $orig-poster-gray;
+}
+
+.logo {
+	padding: 10px 0;
+}
+
+.black {
+	background-color: $bg-black;
+}
+
+.main-nav {
+	margin-top: 10px;
+	font-size: 1.5em;
+
+	ul {
+		li {
+			display: inline-block;
+			padding: 10px;
+
+			a {
+				font-weight: 700;
+				color: $text-gray;
+
+				&.active {
+					color: $orig-poster-blue;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}//end .main-nav
+// ------ END:NAV ------ //
+
+
+
+
+// ------ POST LISTING ------ //
+.post {
+	@include transition(.2s, all);
+	border-bottom: 2px solid darken($orig-poster-gray, 30%);
+	margin-bottom: 20px;
+	background-color: darken($container-black, 2%);
+	color: $almost-white;
+	cursor: pointer;
+	border-radius: 8px;
+
+	&:hover {
+		@include transition(.2s, all);
+		border-color: $orig-poster-blue;
+		background-color: darken($container-black, 3%);
+	}
+
+	&.featured {
+		border-color: darken($orig-poster-gray, 30%);
+		margin-top: 20px;
+
+		&:hover {
+			@include transition(.2s, all);
+			border-color: $orig-poster-red;
+
+			.post-content {
+				@include transition(.2s, all);
+				border-color: $orig-poster-red;
+			}
+		}
+
+		.post-img {
+			border-bottom-left-radius: 8px;
+			border-top-right-radius: 0;	
+		}
+		
+		.featured {
+			color: $orig-poster-red;
+			font-family: $novelty-font;
+			border-radius: 8px;
+
+			@media (max-width: $screen-xs-max) { 
+    			display: block;
+    			margin-top: 10px;
+			}
+		}
+
+		.post-title {
+			border-top: none;
+			font-size: 2.5em;
+		}
+
+		.post-author {
+			font-size: 1em;
+		}
+		
+		.post-excerpt {
+			font-size: 1.2em;
+		}
+
+		.post-content {
+			border-top: none;
+			padding-left: 0;
+			padding-right: 0;
+
+			@media (max-width: $screen-xs-max) { 
+    			padding: 0 15px;
+			}
+		}
+	}
+
+	.post-img {
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+	
+	.post-chunk {
+		padding-bottom: 5px;
+		border-bottom: 1px solid darken($orig-poster-gray, 30%);
+	}
+
+	.post-title {
+		margin: 0 0 5px 0;
+		color: $almost-white;
+	}
+
+	.post-author {
+		margin: 0;
+		font-size: .9em;
+	}
+	
+	.post-excerpt {
+		margin-top: 10px;
+	}
+
+	.post-content {
+		padding: 15px;
+		color: darken($almost-white, 15%);
+	}
+}//end .post
+
+//override link hover color
+a .post,  {
+	color: initial;
+}
+// ------ END:POST LISTING ------ //
+
+
+
+
+// ------ POSTS ------ //
+.post-container {
+	font-size: 1.3em;
+	line-height: 28px;
+
+	@media (max-width: $screen-xs-max) { 
+		font-size: 1em;
+		line-height: 22px;  
+  	}
+
+  	p {
+  		margin-bottom: 15px;
+  	}
+	
+	.post-col {
+		background-color: #E6E6E6;
+		color: $text-black;
+		padding: 20px;
+		border-radius: 6px;
+		margin-bottom: 20px;	
+		
+		.post-header {
+			padding: 20px 0;
+			border-bottom: 4px solid $orig-poster-blue;
+			margin-bottom: 20px;
+
+			.title {
+				margin-top: 0;
+				font-weight: bold;
+			}
+
+			.author {
+				margin: 0;
+			}
+
+			.date {
+				margin: 0;
+			}
+		}
+	
+		p {	
+			margin-bottom: 20px;
+		}
+	}//end .post-col
+
+	.related-posts-col {
+		color: $text-black;
+		background-color: #E6E6E6;
+		border-radius: 6px;
+		padding: 20px;
+		
+		h2 {
+			margin-top: 0;
+		}
+
+		.related-post-container {
+			background-color: $bg-black;
+			border: 2px solid black;
+			padding: 15px;
+		}
+	}
+}//end .post-container
+// ------ END:POSTS ------ //
+
+
+
+
+
+// ------ ARCHIVE ------ //
+.archive-container {
+
+	.posts-list {
+		list-style: none;
+	}
+
+	h1 {
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		border-bottom: 4px solid $orig-poster-gray;
+	}
+}
+// ------ END:ARCHIVE ------ //
+
+
+
+
+// ------ ABOUT ------ //
+.about-container {
+	h1 {
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		border-bottom: 4px solid $orig-poster-gray;
+	}
+
+	.bio-container {
+		padding-bottom: 10px;
+		margin-bottom: 25px;
+		border-bottom: 4px solid $orig-poster-gray;
+		
+		.name {
+			font-size: 1.5em;
+			color: $orig-poster-blue;
+		}
+
+
+	}//end .bio-container
+}
+// ------ END:ABOUT ------ //
+
+
+
+
+// ------ FOOTER ------ //
+footer {
+	padding: 15px 0;
+	margin-top: 25px;
+	border-top: 1px solid $orig-poster-gray;
+	background-color: $bg-black;
+}
+// ------ END:FOOTER ------ //
+
+
+
+
+
