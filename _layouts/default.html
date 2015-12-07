@@ -15,9 +15,11 @@
   
   
   <body class="starry-bg">
-    {% include header.html %}
-    
-    {{ content }}
+    <div class="page-wrap">
+      {% include header.html %}
+      
+      {{ content }}
+    </div><!-- /page-wrap -->
     
     {% include footer.html %}
   </body>

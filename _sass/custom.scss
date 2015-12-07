@@ -1,4 +1,25 @@
 // ------ GENERAL ------ //
+html, body {
+	height: 100%;
+}
+
+//sticky footer stuff 
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -226px; 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+footer, .page-wrap:after {
+  height: 226px; 
+}
+//end sticky footer stuff
+
 body {
 	color: $text-gray;
 	font-family: $sans-serif;
@@ -19,6 +40,14 @@ body {
 .black-bg {
 	background-color: $container-black;
 	border-radius: 8px;
+}
+
+a {
+	@include transition(.2s, all);
+
+	&:hover {
+		@include transition(.2s, all);
+	}
 }
 // ------ END:GENERAL ------ //
 
@@ -288,6 +317,18 @@ a .post,  {
 
 
 
+// ------ 404 ------ //
+.go-home {
+	font-family: $novelty-font;
+	margin-top: 20px;
+	font-size: 2em;
+}
+// ------ END:404 ------ //
+
+
+
+
+
 // ------ FOOTER ------ //
 footer {
 	padding: 30px 0;
@@ -307,10 +348,23 @@ footer {
 		margin-bottom: 10px;
 	}
 
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+
+		.social {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
 	.copyright {
 		color: gray;
 		font-family: $sans-serif;
 		font-size: .9em;
+		margin-bottom: 0;
 	}
 }
 // ------ END:FOOTER ------ //
