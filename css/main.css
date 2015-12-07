@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
 html {
   font-family: sans-serif;
@@ -7333,65 +7334,17 @@ body.starry-bg {
   background-image: url(../img/starry-bg.png);
 }
 
-.black-container {
-  background-color: rgba(30, 30, 30, 0.85);
-  border-radius: 8px;
-}
-.black-container.main-container {
+.container.main-container {
   padding: 20px;
 }
 
-.post {
-  -webkit-transition: 0.2s, all;
-  -o-transition: 0.2s, all;
-  transition: 0.2s, all;
-  border-bottom: 2px solid #797979;
-  margin-bottom: 20px;
-  background-color: rgba(25, 25, 25, 0.85);
-  cursor: pointer;
-}
-.post:hover {
-  -webkit-transition: 0.2s, all;
-  -o-transition: 0.2s, all;
-  transition: 0.2s, all;
-  border-color: #0e77df;
-  background-color: rgba(22, 22, 22, 0.85);
-}
-.post:hover .post-content {
-  -webkit-transition: 0.2s, all;
-  -o-transition: 0.2s, all;
-  transition: 0.2s, all;
-  border-color: #0e77df;
-}
-.post .pic {
-  min-height: 300px;
-  background: url(../img/post-pic-1.jpg);
-  background-size: cover;
-}
-.post .pic-fixed {
-  width: 100%;
-}
-.post .post-content {
-  padding: 15px;
-  border-top: 2px solid #797979;
-}
-.post.featured {
-  border-color: #797979;
-}
-.post.featured:hover {
-  -webkit-transition: 0.2s, all;
-  -o-transition: 0.2s, all;
-  transition: 0.2s, all;
-  border-color: #b60800;
-}
-.post.featured:hover .post-content {
-  -webkit-transition: 0.2s, all;
-  -o-transition: 0.2s, all;
-  transition: 0.2s, all;
-  border-color: #b60800;
+.black-bg {
+  background-color: rgba(30, 30, 30, 0.85);
+  border-radius: 8px;
 }
 
 header {
+  font-family: "Orbitron", sans-serif;
   margin-bottom: 25px;
   border-bottom: 1px solid #797979;
 }
@@ -7419,6 +7372,103 @@ header {
 .main-nav ul li a.active {
   color: #0e77df;
   text-decoration: underline;
+}
+
+.post {
+  -webkit-transition: 0.2s, all;
+  -o-transition: 0.2s, all;
+  transition: 0.2s, all;
+  border-bottom: 2px solid #2d2d2d;
+  margin-bottom: 20px;
+  background-color: rgba(25, 25, 25, 0.85);
+  color: #dddddd;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.post:hover {
+  -webkit-transition: 0.2s, all;
+  -o-transition: 0.2s, all;
+  transition: 0.2s, all;
+  border-color: #0e77df;
+  background-color: rgba(22, 22, 22, 0.85);
+}
+.post.featured {
+  border-color: #2d2d2d;
+  margin-top: 20px;
+}
+.post.featured:hover {
+  -webkit-transition: 0.2s, all;
+  -o-transition: 0.2s, all;
+  transition: 0.2s, all;
+  border-color: #b60800;
+}
+.post.featured:hover .post-content {
+  -webkit-transition: 0.2s, all;
+  -o-transition: 0.2s, all;
+  transition: 0.2s, all;
+  border-color: #b60800;
+}
+.post.featured .post-img {
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 0;
+}
+.post.featured .featured {
+  color: #b60800;
+  font-family: "Orbitron", sans-serif;
+  border-radius: 8px;
+}
+@media (max-width: 767px) {
+  .post.featured .featured {
+    display: block;
+    margin-top: 10px;
+  }
+}
+.post.featured .post-title {
+  border-top: none;
+  font-size: 2.5em;
+}
+.post.featured .post-author {
+  font-size: 1em;
+}
+.post.featured .post-excerpt {
+  font-size: 1.2em;
+}
+.post.featured .post-content {
+  border-top: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 767px) {
+  .post.featured .post-content {
+    padding: 0 15px;
+  }
+}
+.post .post-img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.post .post-chunk {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #2d2d2d;
+}
+.post .post-title {
+  margin: 0 0 5px 0;
+  color: #dddddd;
+}
+.post .post-author {
+  margin: 0;
+  font-size: .9em;
+}
+.post .post-excerpt {
+  margin-top: 10px;
+}
+.post .post-content {
+  padding: 15px;
+  color: #b7b7b7;
+}
+
+a .post {
+  color: initial;
 }
 
 .post-container {
