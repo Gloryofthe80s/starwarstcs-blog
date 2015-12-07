@@ -37,15 +37,18 @@
           <h2>Recent Posts:</h2>
 
           <div class="row">
-            {% assign titleOfCurrentPost = "{{ page.title }}" %}
-            {% assign allPostsButThisOne = (site.posts | where: "title" , != titleOfCurrentPost) %}
+            {% assign maxCount = 2 %}
+            {% assign count = 0 %}
             
-            {% for post in allPostsButThisOne limit:2 %}
-              <div class="col-sm-6">
-                <div class="related-post-container">
-                  <span>{{ post.title }}</span>
-                </div><!-- /related-post-container -->
-              </div><!-- /col -->
+            {% for post in site.posts %}
+              {% if post.title != page.title and count < maxCount %}
+                {% assign count = count | plus: 1 %}
+                <div class="col-sm-6">
+                  <div class="related-post-container">
+                    <span><a href="{{ post.url }}">{{ post.title }}</a></span>
+                  </div><!-- /related-post-container -->
+                </div><!-- /col -->
+              {% endif %}
             {% endfor %}
           </div><!-- /row -->
         </div><!-- /col -->
