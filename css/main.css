@@ -7343,6 +7343,25 @@ button.close {
   font-family: episodeone;
   src: url(/font/episode1.ttf);
 }
+html, body {
+  height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -226px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+footer, .page-wrap:after {
+  height: 226px;
+}
+
 body {
   color: #DDD;
   font-family: "Open Sans", sans-serif;
@@ -7359,6 +7378,17 @@ body.starry-bg {
 .black-bg {
   background-color: rgba(30, 30, 30, 0.85);
   border-radius: 8px;
+}
+
+a {
+  -webkit-transition: 0.2s, all;
+  -o-transition: 0.2s, all;
+  transition: 0.2s, all;
+}
+a:hover {
+  -webkit-transition: 0.2s, all;
+  -o-transition: 0.2s, all;
+  transition: 0.2s, all;
 }
 
 header {
@@ -7566,6 +7596,12 @@ a .post {
   color: #0e77df;
 }
 
+.go-home {
+  font-family: "Orbitron", sans-serif;
+  margin-top: 20px;
+  font-size: 2em;
+}
+
 footer {
   padding: 30px 0;
   margin-top: 25px;
@@ -7582,10 +7618,17 @@ footer .social {
   height: 36px;
   margin-bottom: 10px;
 }
+footer a:hover {
+  text-decoration: none;
+}
+footer a .social:hover {
+  text-decoration: none;
+}
 footer .copyright {
   color: gray;
   font-family: "Open Sans", sans-serif;
   font-size: .9em;
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
