@@ -63,7 +63,13 @@ header {
 }
 
 .logo {
+	@include transition(.2s, all);
 	padding: 10px 0;
+
+	&:hover {
+		@include transition(.2s, all);
+		opacity: .8;
+	}
 }
 
 .black {
@@ -110,6 +116,26 @@ header {
 		@include transition(.2s, all);
 		border-color: $orig-poster-blue;
 		background-color: darken($container-black, 3%);
+		
+		.post-title {
+			@include transition(.2s, all);
+			color: lighten($almost-white, 5%);
+		}
+
+		.post-excerpt {
+			@include transition(.2s, all);
+			color: lighten($almost-white, 5%);
+		}
+
+		.post-author {
+			@include transition(.2s, all);
+			color: lighten($almost-white, 5%);
+		}
+
+		.post-img {
+			@include transition(.2s, all);
+			opacity: 1;
+		}
 	}
 
 	&.featured {
@@ -124,14 +150,30 @@ header {
 				@include transition(.2s, all);
 				border-color: $orig-poster-red;
 			}
+
+			.post-title {
+				color: lighten($almost-white, 5%);
+			}
+
+			.featured-post-callout {
+				@include transition(.2s, all);	
+				color: lighten($orig-poster-red, 10%);
+			}
+
+			.post-img {
+				@include transition(.2s, all);
+				opacity: 1;
+			}
 		}
 
 		.post-img {
 			border-bottom-left-radius: 8px;
 			border-top-right-radius: 0;	
+			opacity: .9;
 		}
 		
-		.featured {
+		.featured-post-callout {
+			@include transition(.2s, all);
 			color: $orig-poster-red;
 			font-family: $novelty-font;
 			border-radius: 8px;
@@ -143,28 +185,35 @@ header {
 		}
 
 		.post-title {
+			@include transition(.2s, all);
 			border-top: none;
-			font-size: 2.5em;
+			font-size: 2.2em;
 		}
 
 		.post-author {
+			@include transition(.2s, all);
 			font-size: 1em;
 		}
 		
 		.post-excerpt {
-			font-size: 1.2em;
+			@include transition(.2s, all);
+			font-size: 1.1em;
+		}
+
+		.post-img {
+			@include transition(.2s, all);
+			opacity: .9;
 		}
 
 		.post-content {
 			border-top: none;
 			padding-left: 0;
-			padding-right: 0;
 
 			@media (max-width: $screen-xs-max) { 
     			padding: 0 15px;
 			}
 		}
-	}
+	}//end &.featured
 
 	.post-img {
 		border-top-left-radius: 8px;
@@ -177,17 +226,28 @@ header {
 	}
 
 	.post-title {
+		@include transition(.2s, all);
+		font-family: $sans-serif-alt;
+		font-weight: 700;
+		text-transform: uppercase;
 		margin: 0 0 5px 0;
 		color: $almost-white;
 	}
 
 	.post-author {
+		@include transition(.2s, all);
 		margin: 0;
 		font-size: .9em;
 	}
 	
 	.post-excerpt {
+		@include transition(.2s, all);
 		margin-top: 10px;
+	}
+
+	.post-img {
+		@include transition(.2s, all);
+		opacity: .9;
 	}
 
 	.post-content {
@@ -207,8 +267,8 @@ a .post,  {
 
 // ------ POSTS ------ //
 .post-container {
-	font-size: 1.3em;
-	line-height: 28px;
+	font-size: 1.2em;
+	line-height: 26px;
 
 	@media (max-width: $screen-xs-max) { 
 		font-size: 1em;
@@ -232,6 +292,9 @@ a .post,  {
 			margin-bottom: 20px;
 
 			.title {
+				font-family: $sans-serif-alt;
+				font-weight: 700;
+				text-transform: uppercase;
 				margin-top: 0;
 				font-weight: bold;
 			}
@@ -252,7 +315,7 @@ a .post,  {
 
 	.related-posts-col {
 		color: $text-black;
-		background-color: #E6E6E6;
+		// background-color: #E6E6E6;
 		border-radius: 6px;
 		padding: 20px;
 		
@@ -281,6 +344,8 @@ a .post,  {
 	}
 
 	h1 {
+		font-family: $sans-serif-alt;
+		font-weight: 700;
 		padding-bottom: 10px;
 		margin-bottom: 20px;
 		border-bottom: 4px solid $orig-poster-gray;
@@ -294,22 +359,28 @@ a .post,  {
 // ------ ABOUT ------ //
 .about-container {
 	h1 {
+		font-family: $sans-serif-alt;
+		font-weight: 700;
 		padding-bottom: 10px;
 		margin-bottom: 20px;
-		border-bottom: 4px solid $orig-poster-gray;
+		border-bottom: 4px solid darken($orig-poster-gray, 30%);
 	}
 
 	.bio-container {
 		padding-bottom: 10px;
 		margin-bottom: 25px;
-		border-bottom: 4px solid $orig-poster-gray;
+		border-bottom: 4px solid darken($orig-poster-gray, 30%);
 		
 		.name {
-			font-size: 1.5em;
+			font-family: $sans-serif-alt;
+			font-size: 1.4em;
 			color: $orig-poster-blue;
 		}
 
-
+		.bio-pic {
+			border-radius: 8px;
+			max-height: 300px;
+		}
 	}//end .bio-container
 }
 // ------ END:ABOUT ------ //
@@ -343,6 +414,7 @@ footer {
 	}
 
 	.social {
+		@include transition(.2s, all);
 		width: 36px;
 		height: 36px;
 		margin-bottom: 10px;
@@ -355,6 +427,8 @@ footer {
 
 		.social {
 			&:hover {
+				@include transition(.2s, all);
+				opacity: .8;
 				text-decoration: none;
 			}
 		}
