@@ -26,7 +26,8 @@ body {
 	
 	&.starry-bg {
 		background-color: $bg-black;
-		background-image : url(../img/starry-bg.png);
+		background-image : url(../img/starry-bg.jpg);
+		background-size: contain;
 	}
 }
 

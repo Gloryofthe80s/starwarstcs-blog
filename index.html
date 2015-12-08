@@ -7,7 +7,7 @@ layout: default
 <div class="container  main-container">
   
   <div class="row">
-    <div class="col-sm-10  col-sm-push-1  black-bg">
+    <div class="col-xs-12  black-bg">
       {% assign featured = (site.posts | where: "featured" , "true") %}
       {% for post in featured limit:1 %}
         <a href="{{ post.url }}">
@@ -37,7 +37,7 @@ layout: default
   </div><!-- /row -->
 
   <div class="row">
-    <div class="col-sm-10  col-sm-push-1  black-bg">
+    <div class="col-sm-12  black-bg">
       <div class="row">
       {% assign notFeatured = (site.posts | where: "featured" , "false") %}
       {% for post in notFeatured limit:2 %}
