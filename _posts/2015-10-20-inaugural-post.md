@@ -4,7 +4,7 @@ title: Inaugural Post
 author: Ryan Howard
 tags: Ep. IV, The Saga
 photo: post-pic-1.jpg
-featured: true
+featured: false
 ---
 
 I think most Star Wars fans have their own personal hierarchy of canon.

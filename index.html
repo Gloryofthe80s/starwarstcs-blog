@@ -7,31 +7,38 @@ layout: default
 <div class="container  main-container">
   
   <div class="row">
-    <div class="col-xs-12  black-bg">
+    <div class="col-xs-12  black-bg  xtra-marg-bot">
       {% assign featured = (site.posts | where: "featured" , "true") %}
       {% for post in featured limit:1 %}
-        <a href="{{ post.url }}">
-          <div class="post  featured">
-            <div class="row">
-              <div class="col-sm-7">
+        <div class="post  featured">
+          <div class="row">
+            <div class="col-sm-7">
+              <a href="{{ post.url }}">
                 <img src="img/{{ post.photo }}" alt="" class="post-img  img-responsive">
-              </div><!-- /col -->
-              
-              <div class="col-sm-5">
-                <div class="post-content">
-                  <div class="post-chunk">
-                    <span class="featured-post-callout">FEATURED &nbsp;POST</span>
+              </a>
+            </div><!-- /col -->
+            
+            <div class="col-sm-5">
+              <div class="post-content">
+                <div class="post-chunk">
+                  <span class="featured-post-callout">FEATURED &nbsp;POST</span>
+                  
+                  <h3 class="post-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                  </h3>
+                  
+                  <p class="post-author">by {{ post.author }}</p>
+                </div><!-- /post-chunk -->
 
-                    <h3 class="post-title">{{ post.title }}</h3>
-                    <p class="post-author">by {{ post.author }}</p>
-                  </div><!-- /post-chunk -->
-
-                  <p class="post-excerpt">{{ post.content | strip_html | truncatewords:75  }}</p>
-                </div><!-- /post-content -->
-              </div><!-- /col -->
-            </div><!-- /row -->
-          </div><!-- /post featured -->
-        </a> 
+                <p class="post-excerpt">{{ post.content | strip_html | truncatewords:75  }}</p>
+                
+                  <p>
+                    <a href="{{ post.url }}" class="post-continue-reading">Continue Reading</a>
+                  </p>
+              </div><!-- /post-content -->
+            </div><!-- /col -->
+          </div><!-- /row -->
+        </div><!-- /post featured -->
       {% endfor %}
     </div><!-- /col -->
   </div><!-- /row -->
@@ -41,22 +48,30 @@ layout: default
       <div class="row">
       {% assign notFeatured = (site.posts | where: "featured" , "false") %}
       {% for post in notFeatured limit:2 %}
-        <a href="{{ post.url }}">
-          <div class="col-sm-6">
-            <div class="post">
+        <div class="col-sm-6">
+          <div class="post">
+            <a href="{{ post.url }}">
               <img src="img/{{ post.photo }}" alt="" class="post-img img-responsive">
-              
-              <div class="post-content">
-                <div class="post-chunk">
-                  <h3 class="post-title">{{ post.title }}</h3>
-                  <p class="post-author">by {{ post.author }}</p>
-                </div><!-- /post-chunk -->
+            </a>
+            
+            <div class="post-content">
+              <div class="post-chunk">
+
+                <h3>
+                  <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
+                </h3>
                 
-                <p class="post-excerpt">{{ post.content | strip_html | truncatewords:60}}</p>  
-              </div><!-- /post-content -->
-            </div><!-- /post -->
-          </div><!-- /col -->
-        </a>
+                <p class="post-author">by {{ post.author }}</p>
+              </div><!-- /post-chunk -->
+              
+              <p class="post-excerpt">{{ post.content | strip_html | truncatewords:60}}</p>  
+              
+              <p>
+                <a href="{{ post.url }}" class="post-continue-reading">Continue Reading</a>
+              </p>
+            </div><!-- /post-content -->
+          </div><!-- /post -->
+        </div><!-- /col -->
       {% endfor %}
       </div><!-- /row -->
     
