@@ -68,10 +68,18 @@
                     <p class="author">by: {{ post.author }}</p>
 
                     <p class="post-excerpt">{{ post.content | strip_html | truncatewords:35}}</p>
+
+                    <p class="continue-reading"><a href="{{ post.url }}">Continue Reading</a></p>
                   </div><!-- /related-post-container -->
                 </div><!-- /col -->
               {% endif %}
             {% endfor %}
+          </div><!-- /row -->
+          
+          <div class="row">
+            <div class="col-xs-12">
+              <p class="go-to-archive"><a href="/archive">SEE ALL POSTS >></a></p>
+            </div>
           </div><!-- /row -->
         </div><!-- /col -->
       </div><!-- /row -->

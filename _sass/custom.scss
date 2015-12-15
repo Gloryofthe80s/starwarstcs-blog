@@ -317,8 +317,8 @@ a .post,  {
 
 // ------ POSTS ------ //
 .post-container {
-	font-size: 1.2em;
-	line-height: 26px;
+	font-size: 1.5em;
+	line-height: 30px;
 
 	@media (max-width: $screen-xs-max) { 
 		font-size: 1em;
@@ -376,6 +376,7 @@ a .post,  {
 		}
 
 		.caption {
+			font-size: .8em;
 			color: $orig-poster-red;
 			text-align: center;
 			font-style: italic;
@@ -391,6 +392,17 @@ a .post,  {
 			color: $almost-white;
 			font-family: $sans-serif-alt;
 			margin-top: 0;
+		}
+
+		.go-to-archive {
+			margin-top: 10px;
+			font-family: $sans-serif-alt;
+			font-weight: 700;
+			font-size: 1.2em;
+
+			a {
+				color: darken($orig-poster-red, 5%);
+			}
 		}
 
 		.related-post-container {
@@ -413,8 +425,14 @@ a .post,  {
 			.title {
 				@include transition(.1s, all);
 				font-family: $sans-serif-alt;
+				font-weight: 700;
+				// font-size: 1.2em;
 				text-transform: uppercase;
 				margin-bottom: 0;
+
+				a {
+					color: $orig-poster-blue;
+				}
 			}
 
 			.author {
@@ -428,7 +446,16 @@ a .post,  {
 				color: $almost-white;
 				line-height: 1.2;
 			}
-		}
+
+			.continue-reading {
+
+				a {
+					font-family: $sans-serif-alt;
+					font-size: .8em;
+					text-transform: uppercase;
+				}
+			}
+		}//end .related-post-container
 	}//end .related-posts-col
 }//end .post-container
 // ------ END:POSTS ------ //

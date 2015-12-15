@@ -7639,8 +7639,8 @@ a .post {
 }
 
 .post-container {
-  font-size: 1.2em;
-  line-height: 26px;
+  font-size: 1.5em;
+  line-height: 30px;
 }
 @media (max-width: 767px) {
   .post-container {
@@ -7691,6 +7691,7 @@ a .post {
   height: auto;
 }
 .post-container .post-col .caption {
+  font-size: .8em;
   color: #B60800;
   text-align: center;
   font-style: italic;
@@ -7704,6 +7705,15 @@ a .post {
   color: #dddddd;
   font-family: "Play", sans-serif;
   margin-top: 0;
+}
+.post-container .related-posts-col .go-to-archive {
+  margin-top: 10px;
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.post-container .related-posts-col .go-to-archive a {
+  color: #9d0700;
 }
 .post-container .related-posts-col .related-post-container {
   background-color: #171717;
@@ -7729,8 +7739,12 @@ a .post {
   -o-transition: 0.1s, all;
   transition: 0.1s, all;
   font-family: "Play", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 0;
+}
+.post-container .related-posts-col .related-post-container .title a {
+  color: #0E77DF;
 }
 .post-container .related-posts-col .related-post-container .author {
   color: #dddddd;
@@ -7741,6 +7755,11 @@ a .post {
   font-size: .8em;
   color: #dddddd;
   line-height: 1.2;
+}
+.post-container .related-posts-col .related-post-container .continue-reading a {
+  font-family: "Play", sans-serif;
+  font-size: .8em;
+  text-transform: uppercase;
 }
 
 .archive-container .posts-list {
