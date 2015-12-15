@@ -7687,6 +7687,8 @@ a .post {
   display: block;
   margin: 0 auto;
   border-radius: 8px;
+  max-width: 100%;
+  height: auto;
 }
 .post-container .post-col .caption {
   color: #B60800;
