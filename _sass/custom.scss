@@ -48,10 +48,10 @@ body {
 }
 
 a {
-	@include transition(.2s, all);
+	@include transition(.1s, all);
 
 	&:hover {
-		@include transition(.2s, all);
+		@include transition(.1s, all);
 	}
 }
 // ------ END:GENERAL ------ //
@@ -68,12 +68,16 @@ header {
 }
 
 .logo {
-	@include transition(.2s, all);
+	@include transition(.1s, all);
 	padding: 10px 0;
 
 	&:hover {
-		@include transition(.2s, all);
+		@include transition(.1s, all);
 		opacity: .8;
+	}
+
+	@media (max-width: $screen-xs-max) { 
+    	margin-bottom: 0;
 	}
 }
 
@@ -100,6 +104,7 @@ header {
 
 			@media (max-width: $screen-xs-max) { 
     			font-size: 12px;
+    			padding-bottom: 0;
 			}
 
 			a {
@@ -121,7 +126,7 @@ header {
 
 // ------ POST LISTING ------ //
 .post {
-	@include transition(.2s, all);
+	@include transition(.1s, all);
 	margin: 20px 0;
 	border-bottom: 2px solid darken($orig-poster-gray, 30%);
 	background-color: darken($container-black, 2%);
@@ -129,7 +134,7 @@ header {
 	border-radius: 8px;
 	
 	.post-img {
-		@include transition(.2s, all);
+		@include transition(.1s, all);
 		opacity: .9;
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
@@ -141,7 +146,7 @@ header {
 	}
 
 	.post-title {
-		@include transition(.2s, all);
+		@include transition(.1s, all);
 		font-family: $sans-serif-alt;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -150,13 +155,13 @@ header {
 	}
 
 	.post-author {
-		@include transition(.2s, all);
+		@include transition(.1s, all);
 		margin: 0;
 		font-size: .9em;
 	}
 	
 	.post-excerpt {
-		@include transition(.2s, all);
+		@include transition(.1s, all);
 		margin-top: 10px;
 	}
 
@@ -166,7 +171,8 @@ header {
 	}
 
 	.post-continue-reading {
-		@include transition(.2s, all);
+		@include transition(.1s, all);
+		font-size: 1.1em;
 		font-family: $sans-serif-alt;
 		color: $orig-poster-blue;
 		text-transform: uppercase;
@@ -177,12 +183,12 @@ header {
 	}
 
 	&:hover {
-		@include transition(.2s, all);
+		@include transition(.1s, all);
 		border-color: $orig-poster-blue;
 		background-color: darken($container-black, 3%);
 		
 		.post-title {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			color: lighten($almost-white, 5%);
 
 			&:hover {
@@ -191,22 +197,22 @@ header {
 		}
 
 		.post-excerpt {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			color: lighten($almost-white, 5%);
 		}
 
 		.post-author {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			color: lighten($almost-white, 5%);
 		}
 
 		.post-img {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			opacity: 1;
 		}
 
 		.post-continue-reading {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			color: lighten($orig-poster-blue, 10%);
 
 			&:hover {
@@ -219,11 +225,11 @@ header {
 		border-color: darken($orig-poster-gray, 30%);
 
 		&:hover {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			border-color: $orig-poster-red;
 
 			.post-content {
-				@include transition(.2s, all);
+				@include transition(.1s, all);
 				border-color: $orig-poster-red;
 			}
 
@@ -232,12 +238,12 @@ header {
 			}
 
 			.featured-post-callout {
-				@include transition(.2s, all);	
+				@include transition(.1s, all);	
 				color: lighten($orig-poster-red, 10%);
 			}
 
 			.post-img {
-				@include transition(.2s, all);
+				@include transition(.1s, all);
 				opacity: 1;
 			}
 		}
@@ -249,7 +255,7 @@ header {
 		}
 		
 		.featured-post-callout {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			color: $orig-poster-red;
 			font-family: $novelty-font;
 			border-radius: 8px;
@@ -261,33 +267,31 @@ header {
 		}
 
 		.post-title {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			border-top: none;
 			font-size: 2.2em;
 
 			a {
 				color: $almost-white;
-			}
 
-			&:hover {
-				a {
+				&:hover {
 					color: $orig-poster-red;
 				}
 			}
 		}//end .post-title
 
 		.post-author {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			font-size: 1em;
 		}
 		
 		.post-excerpt {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			font-size: 1.1em;
 		}
 
 		.post-img {
-			@include transition(.2s, all);
+			@include transition(.1s, all);
 			opacity: .9;
 		}
 
@@ -332,6 +336,11 @@ a .post,  {
 		border-radius: 6px;
 		margin-bottom: 20px;	
 		
+		.post-wrap {
+			padding: 15px;
+			background-color: #E6E6E6;
+		}
+
 		.post-header {
 			padding: 20px 0;
 			border-bottom: 4px solid $orig-poster-blue;
@@ -356,6 +365,18 @@ a .post,  {
 	
 		p {	
 			margin-bottom: 20px;
+		}
+		
+		.post-pic {
+			display: block;
+			margin: 0 auto;
+			border-radius: 8px;
+		}
+
+		.caption {
+			color: $orig-poster-red;
+			text-align: center;
+			font-style: italic;
 		}
 	}//end .post-col
 
@@ -460,7 +481,7 @@ footer {
 	}
 
 	.social {
-		@include transition(.2s, all);
+		@include transition(.1s, all);
 		width: 36px;
 		height: 36px;
 		margin-bottom: 10px;
@@ -473,7 +494,7 @@ footer {
 
 		.social {
 			&:hover {
-				@include transition(.2s, all);
+				@include transition(.1s, all);
 				opacity: .8;
 				text-decoration: none;
 			}

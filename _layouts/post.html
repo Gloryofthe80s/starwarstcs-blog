@@ -6,7 +6,7 @@
     <title>{{ page.title }} | SW:TCS</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link href="{{site.base_url}}/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="{{ site.base_url }}/img/favicon.ico" rel="icon" type="image/x-icon" />
     
     <!-- STYLES -->
     <link rel="stylesheet" href="/css/main.css">
@@ -21,16 +21,18 @@
     
     <div class="container post-container">
       <div class="row">
-        <div class="post-col col-md-8 col-md-push-2">
-          <div class="post-header">
-            <h1 class="title">{{ page.title }}</h1>
-            <p class="date">{{ page.date | date_to_long_string }}</p>
-            <p class="author">by: {{ page.author }}</p>
-          </div><!-- /post-header -->
-          
-          <div class="post-content">
-            {{ content }}
-          </div><!-- /post-content -->
+        <div class="post-col  col-md-8  col-md-push-2  black-bg">
+          <div class="post-wrap">
+            <div class="post-header">
+              <h1 class="title">{{ page.title }}</h1>
+              <p class="date">{{ page.date | date_to_long_string }}</p>
+              <p class="author">by: {{ page.author }}</p>
+            </div><!-- /post-header -->
+            
+            <div class="post-content">
+              {{ content }}
+            </div><!-- /post-content -->
+          </div><!-- /post-wrap -->
         </div><!-- /col -->
       </div><!-- /row -->
 

@@ -3,7 +3,7 @@ layout: post
 title: Inaugural Post
 author: Ryan Howard
 tags: Ep. IV, The Saga
-photo: post-pic-1.jpg
+photo: dianoga-eye.jpg
 featured: false
 ---
 
