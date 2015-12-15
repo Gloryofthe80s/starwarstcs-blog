@@ -7701,12 +7701,46 @@ a .post {
   padding: 20px;
 }
 .post-container .related-posts-col h2 {
+  color: #dddddd;
+  font-family: "Play", sans-serif;
   margin-top: 0;
 }
 .post-container .related-posts-col .related-post-container {
   background-color: #171717;
-  border: 2px solid black;
   padding: 15px;
+  border-radius: 8px;
+}
+.post-container .related-posts-col .related-post-container img {
+  -webkit-transition: 0.1s, all;
+  -o-transition: 0.1s, all;
+  transition: 0.1s, all;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 5px;
+}
+.post-container .related-posts-col .related-post-container img:hover {
+  -webkit-transition: 0.1s, all;
+  -o-transition: 0.1s, all;
+  transition: 0.1s, all;
+  opacity: .8;
+}
+.post-container .related-posts-col .related-post-container .title {
+  -webkit-transition: 0.1s, all;
+  -o-transition: 0.1s, all;
+  transition: 0.1s, all;
+  font-family: "Play", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.post-container .related-posts-col .related-post-container .author {
+  color: #dddddd;
+  font-size: .8em;
+  border-bottom: 2px solid #464646;
+}
+.post-container .related-posts-col .related-post-container .post-excerpt {
+  font-size: .8em;
+  color: #dddddd;
+  line-height: 1.2;
 }
 
 .archive-container .posts-list {

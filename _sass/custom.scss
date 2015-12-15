@@ -384,20 +384,52 @@ a .post,  {
 
 	.related-posts-col {
 		color: $text-black;
-		// background-color: #E6E6E6;
 		border-radius: 6px;
 		padding: 20px;
 		
 		h2 {
+			color: $almost-white;
+			font-family: $sans-serif-alt;
 			margin-top: 0;
 		}
 
 		.related-post-container {
 			background-color: $bg-black;
-			border: 2px solid black;
 			padding: 15px;
+			border-radius: 8px;
+
+			img {
+				@include transition(.1s, all);
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+				margin-bottom: 5px;
+
+				&:hover {
+					@include transition(.1s, all);
+					opacity: .8;
+				}
+			}
+
+			.title {
+				@include transition(.1s, all);
+				font-family: $sans-serif-alt;
+				text-transform: uppercase;
+				margin-bottom: 0;
+			}
+
+			.author {
+				color: $almost-white;
+				font-size: .8em;
+				border-bottom: 2px solid darken($orig-poster-gray, 20%);
+			}
+
+			.post-excerpt {
+				font-size: .8em;
+				color: $almost-white;
+				line-height: 1.2;
+			}
 		}
-	}
+	}//end .related-posts-col
 }//end .post-container
 // ------ END:POSTS ------ //
 
