@@ -43,6 +43,13 @@ body {
 	border-radius: 8px;
 }
 
+.black-wrap {
+	padding: 15px;
+	margin: 15px 0;
+	background-color: $bg-black;
+	border-radius: 8px;
+}
+
 .xtra-marg-bot {
 	margin-bottom: 20px;
 }
@@ -399,6 +406,7 @@ a .post,  {
 			font-family: $sans-serif-alt;
 			font-weight: 700;
 			font-size: 1.2em;
+			margin: 0;
 
 			a {
 				color: darken($orig-poster-red, 5%);

@@ -7,17 +7,19 @@ layout: default
 <div class="container  archive-container  main-container  post-container">
 	<div class="row">
 		<div class="col-md-10 col-md-push-1 black-bg">
-			<h1>ALL POSTS:</h1>
+			<div class="black-wrap">
+				<h1>ALL POSTS:</h1>
 
-			<ul class="posts-list">
-			  {% for post in site.posts %}
-			    <li>
-			      <a href="{{ post.url }}">{{ post.title }}</a>
+				<ul class="posts-list">
+				  {% for post in site.posts %}
+				    <li>
+				      <a href="{{ post.url }}">{{ post.title }}</a>
 
-			      <span class="pull-right">{{ post.date | date_to_string }}</span>
-			    </li>
-			  {% endfor %}
-			</ul>
+				      <span class="pull-right">{{ post.date | date_to_string }}</span>
+				    </li>
+				  {% endfor %}
+				</ul>
+			</div><!-- black-wrap -->
 		</div><!-- /col -->
 	</div><!-- /row -->
 </div><!-- /container -->
