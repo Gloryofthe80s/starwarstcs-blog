@@ -7703,6 +7703,9 @@ a .post {
   text-align: center;
   font-style: italic;
 }
+.post-container .post-col ul li {
+  margin-bottom: 15px;
+}
 .post-container .related-posts-col {
   color: #424040;
   border-radius: 6px;

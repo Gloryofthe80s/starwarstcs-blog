@@ -388,6 +388,12 @@ a .post,  {
 			text-align: center;
 			font-style: italic;
 		}
+
+		ul {
+			li {
+				margin-bottom: 15px;
+			}
+		}
 	}//end .post-col
 
 	.related-posts-col {
