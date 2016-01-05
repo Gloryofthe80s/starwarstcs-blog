@@ -7775,6 +7775,7 @@ a .post {
 
 .archive-container .posts-list {
   list-style: none;
+  padding-left: 0;
 }
 .archive-container h1 {
   font-family: "Play", sans-serif;
