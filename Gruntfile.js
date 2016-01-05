@@ -7,18 +7,6 @@ module.exports = function( grunt ) {
     
     grunt.initConfig({
         
-        sass: {                              
-            dist: {                            
-                options: {                       
-                  style: 'expanded'
-                },
-                files: {                         
-                  'css/main.css': '_sass/main.scss'
-                }
-            }
-        }, //end sass
-
-        
         csslint : {
             test : {
                 options : {
@@ -47,30 +35,6 @@ module.exports = function( grunt ) {
         }, //end cssmin
 
         
-        watch : {
-            files : [ 
-                        'index.html',
-                        'about.html',
-                        'archive.html',
-                        'contact.html',
-                        '_sass/*.scss',
-                        '_layouts/*.html',
-                        '_includes/*.html',
-                        '_posts/*.md',
-                        '_config.yml', 
-                    ],
-            tasks : [ 
-                        'sass'
-                    ],
-            options : {
-                spawn : false,
-                interrupt : true,
-                atBegin : true,
-                livereload : true
-            }
-        },//end watch
-        
-        
         shell : {
             jekyllBuild : {
                 command : 'jekyll build'
@@ -91,7 +55,7 @@ module.exports = function( grunt ) {
     // register custom grunt tasks
     grunt.registerTask( 'serve', ['sass', 'shell:jekyllServe' ] );
     grunt.registerTask( 'test', [ 'csslint' ] );
-    grunt.registerTask( 'build', [ 'sass', 'concat', 'cssmin', 'shell:jekyllBuild' ] );
+    grunt.registerTask( 'build', [ 'concat', 'cssmin', 'shell:jekyllBuild' ] );
     grunt.registerTask( 'deploy', [ 'shell:ghPages' ] );
 
 };
