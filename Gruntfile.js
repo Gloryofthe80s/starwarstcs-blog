@@ -18,23 +18,6 @@ module.exports = function( grunt ) {
             }
         }, //end csslint
 
-        
-        concat : {
-            dist : {
-                src : [ 'css/*.css' ],
-                dest : 'css/the-big-one.css',
-            }
-        }, //end concat
-
-        
-        cssmin : {
-            dist : {
-                src : 'css/main.css',
-                dest : 'css/main.min.css'
-            }
-        }, //end cssmin
-
-        
         shell : {
             jekyllBuild : {
                 command : 'jekyll build'
@@ -53,9 +36,7 @@ module.exports = function( grunt ) {
 
     
     // register custom grunt tasks
-    grunt.registerTask( 'serve', ['sass', 'shell:jekyllServe' ] );
     grunt.registerTask( 'test', [ 'csslint' ] );
-    grunt.registerTask( 'build', [ 'concat', 'cssmin', 'shell:jekyllBuild' ] );
     grunt.registerTask( 'deploy', [ 'shell:ghPages' ] );
 
 };
