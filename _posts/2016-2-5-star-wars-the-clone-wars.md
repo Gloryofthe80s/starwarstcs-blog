@@ -4,7 +4,7 @@ title: ! 'Star Wars: The Clone Wars'
 author: Ryan Vanasse
 tags: 
 photo: clone-wars-movie.jpg
-featured: true
+featured: false
 ---
 
 Have you ever watched the Star Wars Prequels with someone born after say, 1995? I think all of us "OG Star Wars Nerds" have heard the stories of our younger cohorts being more enthusiastic about the prequels than the original trilogy, but it's hard to really imagine this being the case, unless you've experienced it. 
