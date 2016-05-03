@@ -3,11 +3,11 @@ html, body {
 	height: 100%;
 }
 
-//sticky footer stuff 
+//sticky footer stuff
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -226px; 
+  margin-bottom: -226px;
 }
 
 .page-wrap:after {
@@ -16,14 +16,14 @@ html, body {
 }
 
 footer, .page-wrap:after {
-  height: 226px; 
+  height: 226px;
 }
 //end sticky footer stuff
 
 body {
 	color: $text-gray;
 	font-family: $sans-serif;
-	
+
 	&.starry-bg {
 		background-color: $bg-black;
 		background-image : url(../img/starry-bg.jpg);
@@ -32,7 +32,7 @@ body {
 }
 
 .container {
-	
+
 	&.main-container {
 		padding: 20px;
 	}
@@ -83,7 +83,7 @@ header {
 		opacity: .8;
 	}
 
-	@media (max-width: $screen-xs-max) { 
+	@media (max-width: $screen-xs-max) {
     	margin-bottom: 0;
 	}
 }
@@ -96,12 +96,12 @@ header {
 	margin-top: 10px;
 	font-size: 1.5em;
 
-	@media (max-width: $screen-xs-max) { 
-		margin-top: 0;   
+	@media (max-width: $screen-xs-max) {
+		margin-top: 0;
 	}
 
 	ul {
-		@media (max-width: $screen-xs-max) { 
+		@media (max-width: $screen-xs-max) {
     		padding: 0;
 		}
 
@@ -109,7 +109,7 @@ header {
 			display: inline-block;
 			padding: 10px;
 
-			@media (max-width: $screen-xs-max) { 
+			@media (max-width: $screen-xs-max) {
     			font-size: 12px;
     			padding-bottom: 0;
 			}
@@ -139,14 +139,14 @@ header {
 	background-color: darken($container-black, 2%);
 	color: $almost-white;
 	border-radius: 8px;
-	
+
 	.post-img {
 		@include transition(.1s, all);
 		opacity: .9;
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
 	}
-	
+
 	.post-chunk {
 		padding-bottom: 5px;
 		border-bottom: 1px solid darken($orig-poster-gray, 30%);
@@ -166,7 +166,7 @@ header {
 		margin: 0;
 		font-size: .9em;
 	}
-	
+
 	.post-excerpt {
 		@include transition(.1s, all);
 		margin-top: 10px;
@@ -193,13 +193,13 @@ header {
 		@include transition(.1s, all);
 		border-color: $orig-poster-blue;
 		background-color: darken($container-black, 3%);
-		
+
 		.post-title {
 			@include transition(.1s, all);
 			color: lighten($almost-white, 5%);
 
 			&:hover {
-				color: $orig-poster-blue; 
+				color: $orig-poster-blue;
 			}
 		}
 
@@ -245,7 +245,7 @@ header {
 			}
 
 			.featured-post-callout {
-				@include transition(.1s, all);	
+				@include transition(.1s, all);
 				color: lighten($orig-poster-red, 10%);
 			}
 
@@ -257,17 +257,17 @@ header {
 
 		.post-img {
 			border-bottom-left-radius: 8px;
-			border-top-right-radius: 0;	
+			border-top-right-radius: 0;
 			opacity: .9;
 		}
-		
+
 		.featured-post-callout {
 			@include transition(.1s, all);
 			color: $orig-poster-red;
 			font-family: $novelty-font;
 			border-radius: 8px;
 
-			@media (max-width: $screen-xs-max) { 
+			@media (max-width: $screen-xs-max) {
     			display: block;
     			margin-top: 10px;
 			}
@@ -291,7 +291,7 @@ header {
 			@include transition(.1s, all);
 			font-size: 1em;
 		}
-		
+
 		.post-excerpt {
 			@include transition(.1s, all);
 			font-size: 1.1em;
@@ -306,7 +306,7 @@ header {
 			border-top: none;
 			padding-left: 0;
 
-			@media (max-width: $screen-xs-max) { 
+			@media (max-width: $screen-xs-max) {
     			padding: 0 15px;
 			}
 		}
@@ -327,22 +327,22 @@ a .post,  {
 	font-size: 1.5em;
 	line-height: 30px;
 
-	@media (max-width: $screen-xs-max) { 
+	@media (max-width: $screen-xs-max) {
 		font-size: 1em;
-		line-height: 22px;  
+		line-height: 22px;
   	}
 
   	p {
   		margin-bottom: 15px;
   	}
-	
+
 	.post-col {
 		background-color: #E6E6E6;
 		color: $text-black;
 		padding: 20px;
 		border-radius: 6px;
-		margin-bottom: 20px;	
-		
+		margin-bottom: 20px;
+
 		.post-wrap {
 			padding: 15px;
 			background-color: #E6E6E6;
@@ -369,11 +369,15 @@ a .post,  {
 				margin: 0;
 			}
 		}
-	
-		p {	
+
+		p {
 			margin-bottom: 20px;
 		}
-		
+
+		cite{
+			font-style: italic;
+		}
+
 		.post-pic {
 			display: block;
 			margin: 0 auto;
@@ -400,7 +404,7 @@ a .post,  {
 		color: $text-black;
 		border-radius: 6px;
 		padding: 20px;
-		
+
 		h2 {
 			color: $almost-white;
 			font-family: $sans-serif-alt;
@@ -513,7 +517,7 @@ a .post,  {
 		padding-bottom: 10px;
 		margin-bottom: 25px;
 		border-bottom: 4px solid darken($orig-poster-gray, 30%);
-		
+
 		.name {
 			font-family: $sans-serif-alt;
 			font-size: 1.4em;
@@ -551,7 +555,7 @@ footer {
 	background-color: $bg-black;
 	text-align: center;
 	font-family: $novelty-font;
-	
+
 	.footer-nav {
 		margin-bottom: 25px;
 	}
@@ -585,8 +589,3 @@ footer {
 	}
 }
 // ------ END:FOOTER ------ //
-
-
-
-
-
