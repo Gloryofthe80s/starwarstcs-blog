@@ -4,12 +4,12 @@ title: ! 'Clone Wars: Season Six'
 author: Ryan Vanasse
 tags: Clone Wars
 photo: clone-wars-season-6.jpg
-featured: true
+featured: false
 ---
 
 When I started this project, I fully expected not only to keep up with my assigned pieces of canonical <cite>Star Wars</cite>, but also to keep up with the project as a whole, to finish both <cite>Clone Wars</cite> series, watch all the movies again, etc. 
 
-I failed. 
+I failed.
 
 Boy, Did I ever fail.
 
