@@ -31,7 +31,6 @@ module.exports = function( grunt ) {
                 command: 'git subtree push --prefix _site origin gh-pages'
             } 
         } //end shell
-    
     });//end initConfig
 
     
