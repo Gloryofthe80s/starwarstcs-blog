@@ -4,7 +4,7 @@ title: ! 'Clone Wars: Volume 2'
 author: Mark Rustad
 tags: Clone Wars
 photo: clone-wars-vol2-cover.jpg
-featured: true
+featured: false
 ---
 
 Though we at Star Wars: The Completionist Saga have been writing about each piece of screen media in the universe’s chronological order this week we must break the trend for Volume 2 of “Star Wars: Clone Wars.” Sort of.
