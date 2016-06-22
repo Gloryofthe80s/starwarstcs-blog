@@ -5804,6 +5804,9 @@ button.close {
 html, body {
   height: 100%; }
 
+blockquote {
+  border-left-color: #0E77DF; }
+
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */

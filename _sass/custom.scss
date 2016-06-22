@@ -3,6 +3,10 @@ html, body {
 	height: 100%;
 }
 
+blockquote {
+	border-left-color: $orig-poster-blue;
+}
+
 //sticky footer stuff
 .page-wrap {
   min-height: 100%;

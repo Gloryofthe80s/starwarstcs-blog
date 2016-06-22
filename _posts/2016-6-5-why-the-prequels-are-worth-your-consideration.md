@@ -4,7 +4,7 @@ title: ! 'Why The Prequels Are Worth Your Consideration'
 author: Ryan Howard
 tags: prequel
 photo: prequels-deserve-attention-cover.jpg
-featured: true
+featured: false
 ---
 
 It is commonly accepted wisdom among those who don't like the Star Wars prequels that one of the chief reasons Episodes I, II and III failed is because they didn't give the fans what they wanted. Sure, detractors often couched their sentiments in other descriptors – the prequels are “confusing,” they're too dry, they got the tone all wrong – but generally speaking, a complaint that the prequels don't “feel like Star Wars” is a statement that the original Star Wars trilogy pushed some buttons you enjoyed, and you would like more of that, please.
