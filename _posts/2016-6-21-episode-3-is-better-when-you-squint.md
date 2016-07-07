@@ -4,7 +4,7 @@ title: ! 'Review: Episode III Is Better When You Squint'
 author: Ryan Vanasse
 tags: prequel
 photo: ep-III-cover.jpg
-featured: true
+featured: false
 ---
 
 On its release 11 years ago, "Star Wars  Episode III: Revenge of the Sith" received an initial [round](http://www.slate.com/articles/arts/movies/2005/05/the_passion_of_the_sith.html) [of](http://www.ew.com/article/2005/05/18/star-wars-episode-iii-revenge-sith) [praise](http://www.washingtonpost.com/wp-dyn/articles/A2017-2005May18.html) that called it a return to form. The praise wasn't as resounding as the initial response to say, Episode I — there were plenty of negative reviews and even the positive reviews hedge—positive in this case is a B-, or a two-and-a-half-stars. The action was there, the effects were still solid, and the story finally had some *weight*, or so we thought at the time.
