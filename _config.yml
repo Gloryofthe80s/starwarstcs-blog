@@ -1,4 +1,4 @@
 # pygments: true
 permalink: /post/:title
-exclude: ['Gemfile','Gemfile.lock','.git','node_modules']
+exclude: ['Gemfile','Gemfile.lock','.git','node_modules','package.json','Gruntfile.js']
 
